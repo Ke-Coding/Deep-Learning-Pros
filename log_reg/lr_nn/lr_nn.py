@@ -12,11 +12,11 @@ class LR_NN:
 	train_set_x:		(m_flat, m_train)
 	train_set_y:		(1, m_train)
 	test_set_x_orig:	(m_test, m_pix, m_pix, 3)
-	test_set_x:			(m_flat, m_test)
-	test_set_y:			(1, m_test)
+	test_set_x:		(m_flat, m_test)
+	test_set_y:		(1, m_test)
 	
-	w, dw:				(m_flat, 1)
-	b, db:				scalar
+	w, dw:			(m_flat, 1)
+	b, db:			scalar
 	"""
 	
 	train_set_x_orig, train_set_y, test_set_x_orig, test_set_y, classes = lr_utils.load_dataset()
@@ -41,7 +41,7 @@ class LR_NN:
 
 		# backward propagation
 		self.dw = np.dot(self.train_set_x, (A - self.train_set_y).T) / m_data	# dw: (m_flat, 1), the same as w's
-		self.db = np.sum(A - self.train_set_y) / m_data							# db: scalar
+		self.db = np.sum(A - self.train_set_y) / m_data				# db: scalar
 		
 		return cost
 	

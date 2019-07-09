@@ -1,5 +1,9 @@
 # Deep-Learning-Pros
 
-some tiny pros for deep-learning:
+Study notes and several tiny pros for deep-learning.
+
+<br>
+
+project list:
 
 - log_reg: logistic regression(based on numpy, spotting cats)
